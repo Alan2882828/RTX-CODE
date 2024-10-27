@@ -1,0 +1,123 @@
+/* Estilos para o cabeçalho do site */
+.cabecalho_1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+/* Estilos para o nome */
+.nome_rtx {
+    margin-right: 5px;
+    display: flex;
+    
+}
+/* Estilos para o icone do site  */
+#icone-do-modal{
+    cursor: pointer;
+}
+/* login com google bnt em mobile e desktop */
+.contenes-entrar-icon_modal{
+    display: flex;
+    flex-direction: row;
+    margin: 5px;
+}
+#entrar-gooogle{
+    margin-right: 10%;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+
+
+
+.menu {
+    /* so para referenciar no @midia queries*/
+    font: optional;
+}
+@media (max-width: 768px) {
+    .menu{
+        display: none;
+    }
+
+}
+
+/* Estilos para o menu do site */
+.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Usar flex para facilitar a responsividade */
+    justify-content: space-around;
+}
+
+.menu ul li {
+    flex: 1; /* Flexível para caber no espaço disponível */
+}
+
+.menu ul li a {
+    display: block;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 30px;
+    text-align: center;
+    font-size: 2vw;
+}
+
+.menu ul li a:hover {
+    background-color: #3f5969;
+    
+
+}
+
+/* Estilos para o modal */
+.modal {
+    display: none; 
+    position:fixed;
+    top: 0;
+    left: 0;
+    width: 50%;
+    flex-direction: column;
+    height: 100vh;
+}
+
+/* Modal content */
+
+.modal-content {
+    background-color: #ffffff;
+    width: 100%;
+    height: 100%;
+    box-shadow: none;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* Estilos para o botão dentro do modal */
+#bnt-pg-modal-mobile{
+    background-color: #ffffff;
+    color: #05101C;
+    width: 100%;
+    cursor: pointer;
+    text-decoration: none;
+
+}
+/* fechar modal*/
+.fechar_modal{
+    
+    margin-top: auto;
+    background-color: #ffffff;
+    color: #05101C;
+    cursor: pointer;
+}
+/* Media queries para responsividade */
+@media (max-width: 768px) {
+    .menu ul {
+        flex-direction: column; /* Colocar os itens do menu em coluna */
+        align-items: center;
+    }
+
+    .menu ul li {
+        width: 100%; /* Cada item de menu ocupa a largura total */
+    }
+}

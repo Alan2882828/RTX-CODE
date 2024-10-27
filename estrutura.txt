@@ -1,0 +1,20 @@
+my_app/
+│
+├── app/
+│   ├── __init__.py
+│   ├── models.py
+│   ├── routes/
+│   │   ├── main.py
+│   │   ├── login/
+│   │   │   └── auth.py
+│   ├── templates/
+│   │   └── index.html
+│   ├── static/
+│       ├── css/
+│       │   └── style.css
+│       ├── img/
+│       │   └── image.jpg
+│       ├── js/
+│           └── script.js
+├── config.py
+├── run.py

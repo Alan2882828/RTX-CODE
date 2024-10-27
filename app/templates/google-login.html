@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jwt-decode/build/jwt-decode.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Google Sign-In</title>
+    <style>
+        /* Estilo para o contêiner do botão de login do Google */
+        #googleSignIn {
+            width: 100%;
+            max-width: 300px;
+            margin: 20px auto;
+        }
+        #backgrand-contener {
+            background-color: rgb(16, 8, 39);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            flex-direction: row;
+        }
+        .item1, .item2 {
+            margin: 20px;
+        }
+        @media (min-width: 768px) {
+            .item1 {
+                order: 2;
+            }
+        }
+        @media (max-width: 768px) {
+            #backgrand-contener {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body id="backgrand-contener">
+    <div class="div1 item1"> 
+        <h1 style="color: aliceblue;">Welcome to my website</h1>
+        <br>
+        <hr>
+        <div id="googleSignIn"></div>
+    </div>
+    <div class="div2 item2" id="userInfo" style="display: none;">
+        <img style="margin-bottom: 20px; border-radius: 50px; font-size: medium;" id="userPicture" alt="User Picture">
+        <hr>
+        <br>
+        <i style="color: blue; font-size: 200%;" class="fa-solid fa-person"></i><p id="userName" style="color: rgb(5, 215, 239)"></p>
+        <br>
+        <hr>
+        <i style="color: blue; font-size: 200%;" class="fa-solid fa-envelope-circle-check"></i><p id="userEmail" style="color: rgb(5, 215, 239)"></p>
+        <hr>
+    </div>
+    <script src="{{ url_for('static', filename='js/google-login.js') }}"></script>
+</body>
+</html>
